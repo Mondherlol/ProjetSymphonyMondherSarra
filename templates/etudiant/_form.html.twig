@@ -1,0 +1,12 @@
+
+
+{{ form_start(form) }}
+{{form_label(form.Soutenance,null,{
+    'label': 'nom emp',
+    'label_attr': {'class': ''}})}}
+    {{ form_widget(form.Soutenance,{'attr':{'class':'form-select','placeholder':'donner votre nom','required':'true'}}) }}
+
+
+ 
+<button class="btn btn-success">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
