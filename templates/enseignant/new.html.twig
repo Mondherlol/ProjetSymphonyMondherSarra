@@ -3,6 +3,7 @@
 {% block title %}New Enseignant{% endblock %}
 
 {% block body %}
+{% include('./navbar/index.html.twig') %}
     <h1>Create new Enseignant</h1>
 
     {{ include('enseignant/_form.html.twig') }}

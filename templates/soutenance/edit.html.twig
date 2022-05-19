@@ -3,6 +3,7 @@
 {% block title %}Edit Soutenance{% endblock %}
 
 {% block body %}
+{% include('./navbar/index.html.twig') %}
     <h1>Edit Soutenance</h1>
 
     {{ include('soutenance/_form.html.twig', {'button_label': 'Update'}) }}

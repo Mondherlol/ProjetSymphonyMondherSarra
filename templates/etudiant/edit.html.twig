@@ -1,13 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Etudiant{% endblock %}
+{% block title %}Modifier Etudiant{% endblock %}
 
 {% block body %}
-    <h1>Edit Etudiant</h1>
+{% include('./navbar/index.html.twig') %}
+    <h1>Modifier Etudiant</h1>
 
     {{ include('etudiant/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('app_etudiant_index') }}">back to list</a>
+    <a class="btn btn-warning" href="{{ path('app_etudiant_index') }}">Retourner à la liste</a>
 
     {{ include('etudiant/_delete_form.html.twig') }}
 {% endblock %}

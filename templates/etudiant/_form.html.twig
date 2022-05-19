@@ -2,11 +2,26 @@
 
 {{ form_start(form) }}
 {{form_label(form.Soutenance,null,{
-    'label': 'nom emp',
+    'label': 'Soutenance',
     'label_attr': {'class': ''}})}}
-    {{ form_widget(form.Soutenance,{'attr':{'class':'form-select','placeholder':'donner votre nom','required':'true'}}) }}
+    {{ form_widget(form.Soutenance,{'attr':{'class':'form-select','required':'true'}}) }}
 
 
- 
-<button class="btn btn-success">{{ button_label|default('Save') }}</button>
+{{form_label(form.nce,null,{
+    'label': 'Nce',
+    'label_attr': {'class': ''}})}}
+    {{ form_widget(form.nce,{'attr':{'class':'form-control is-valid w-50','required':'true'}}) }}
+
+{{form_label(form.nom,null,{
+    'label': 'Nom',
+    'label_attr': {'class': ''}})}}
+    {{ form_widget(form.nom,{'attr':{'class':'form-control is-valid w-50','required':'true'}}) }}
+
+{{form_label(form.prenom,null,{
+    'label': 'Prenom',
+    'label_attr': {'class': ''}})}}
+    {{ form_widget(form.prenom,{'attr':{'class':'form-control is-valid w-50','required':'true'}}) }}
+
+ <button class="btn btn-success">{{ button_label|default('Enregistrer') }}</button>
+
 {{ form_end(form) }}
