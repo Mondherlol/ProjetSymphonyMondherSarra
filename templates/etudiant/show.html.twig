@@ -50,7 +50,9 @@
             </tr>
             <tr>
                 <th>Numéro soutenance</th>
-                <td>{{ etudiant.soutenance.id }}</td>
+                <td> <a href="/soutenance/{{ etudiant.soutenance.id }}" style="color:blue">
+                {{ etudiant.soutenance.id }}
+                </a></td>
             </tr>
         </tbody>
     </table>

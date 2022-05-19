@@ -15,7 +15,7 @@ class SoutenanceType extends AbstractType
     {
         $builder
             ->add('date_soutenance')
-            ->add('note')
+            ->add('note',null,['attr' => ['maxlength' => 2,'max'=>20,'min'=>0]])
             ->add('numJury',EntityType::class,array('class'=>Enseignant::class,'choice_label'=>'prenom','choice_value'=>'id'))
 
         ;

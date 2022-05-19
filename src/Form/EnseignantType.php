@@ -12,9 +12,9 @@ class EnseignantType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('matricule')
-            ->add('nom')
-            ->add('prenom')
+        ->add('matricule',null,['attr' => ['min' => 0,'max'=>9999]])
+        ->add('nom')
+        ->add('prenom')
         ;
     }
 

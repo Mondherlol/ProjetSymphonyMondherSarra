@@ -22,7 +22,12 @@
             </tr>
                <tr>
                 <th>NomJury</th>
-                <td>{{ soutenance.numjury.nom }}</td>
+                <td>
+                <a href="/enseignant/{{soutenance.numjury.id}}" style="color:blue">
+
+                {{ soutenance.numjury.nom }}
+                </a>
+                </td>
             </tr>
         </tbody>
     </table>
