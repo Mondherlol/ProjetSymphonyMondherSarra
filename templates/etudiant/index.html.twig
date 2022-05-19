@@ -25,10 +25,10 @@
                 <td>{{ etudiant.nce }}</td>
                 <td>{{ etudiant.nom }}</td>
                 <td>{{ etudiant.prenom }}</td>
-                <td>{{ etudiant.soutenance.id }}</td>
+                <td><a href="/soutenance/{{ etudiant.soutenance.id }}" style="color:blue"> {{ etudiant.soutenance.id }}</a></td>
                 <td>
-                    <a href="{{ path('app_etudiant_show', {'id': etudiant.id}) }}">Afficher</a>
-                    <a href="{{ path('app_etudiant_edit', {'id': etudiant.id}) }}">Modifier</a>
+                    <a  class="btn btn-info" href="{{ path('app_etudiant_show', {'id': etudiant.id}) }}">Afficher</a>
+                    <a  class="btn btn-warning" href="{{ path('app_etudiant_edit', {'id': etudiant.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -39,5 +39,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_etudiant_new') }}">Créer nouveau</a>
+    <a  class="btn btn-success" href="{{ path('app_etudiant_new') }}">Créer nouveau</a>
 {% endblock %}

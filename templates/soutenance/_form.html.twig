@@ -6,14 +6,21 @@
 
 {{form_label(form.note,null,{
     'label': 'Note',
-    'label_attr': {'class': ''}})}}
-    {{ form_widget(form.note,{'attr':{'class':'form-control is-valid w-50','placeholder':'Veuillez entrer la note','required':'true'}}) }}
+    'label_attr': {'class': 'g'}})}}
+    {{ form_widget(form.note,{'attr':{'class':'form-control inputDefault w-50','placeholder':'Veuillez entrer la note','required':'true'}}) }}
 
 
 {{form_label(form.date_soutenance,null,{
     'label': 'Date',
-    'label_attr': {'class': ''}})}}
-    {{ form_widget(form.date_soutenance,{'attr':{'class':'date','placeholder':'Veuillez entrer la note','required':'true'}}) }}
+    'label_attr': {'class': 'g'}})}}
+    {{ form_widget(form.date_soutenance,{'attr':{'class':'date-picker','required':'true'}}) }}
+
+
+{{form_label(form.numJury,null,{
+    'label': 'Jury',
+    'label_attr': {'class': 'g'}})}}
+    {{ form_widget(form.numJury,{'attr':{'class':'form-select','required':'true'}}) }}
+
  <button class="btn btn-success">{{ button_label|default('Enregistrer') }}</button>
 
 {{ form_end(form) }}

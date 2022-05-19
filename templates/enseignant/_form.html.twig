@@ -1,4 +1,19 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+{{form_label(form.matricule,null,{
+    'label': 'Matricule',
+    'label_attr': {'class': ''}})}}
+    {{ form_widget(form.matricule,{'attr':{'class':'form-control is-valid w-50','placeholder':'Saisissez votre matricule','required':'true'}}) }}
+
+{{form_label(form.nom,null,{
+    'label': 'Nom',
+    'label_attr': {'class': ''}})}}
+    {{ form_widget(form.nom,{'attr':{'class':'form-control is-valid w-50','placeholder':'Veuillez entrer votre nom','required':'true'}}) }}
+
+{{form_label(form.prenom,null,{
+    'label': 'Prenom',
+    'label_attr': {'class': ''}})}}
+    {{ form_widget(form.prenom,{'attr':{'class':'form-control is-valid w-50','placeholder':'Veuillez entrer votre prénom','required':'true'}}) }}
+
+ <button class="btn btn-success">{{ button_label|default('Enregistrer') }}</button>
+
 {{ form_end(form) }}
